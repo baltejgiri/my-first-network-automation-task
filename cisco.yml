@@ -1,0 +1,11 @@
+---
+- hosts: switches
+  become: yes
+
+  tasks:
+    - name: Create Loopback888
+      cisco.ios.iso_interfaces:
+        config:
+          - name: Loopback888
+            description: "Created for testing by Baltej"
+            enabled: true
